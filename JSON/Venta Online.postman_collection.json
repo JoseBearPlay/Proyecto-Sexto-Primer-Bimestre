@@ -1,0 +1,1303 @@
+{
+	"info": {
+		"_postman_id": "1bcd4f5c-3b63-43fd-bf96-8e53c7d8ab32",
+		"name": "Venta Online",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ejemplo Usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/ejemplo",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ejemplo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guardar Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Thiago Jose Molina",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "ADMIN",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "tmolina001@kinal.edu.gt",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/registrarUsuario",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"registrarUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guardar Clientes",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3OTkzMDEzYzdiMjJlMTgxODg5ZjgiLCJub21icmUiOiJNYW51ZWwgVWx5c2VzIEhlcm5hbmRleiIsInVzZXJuYW1lIjoiQ0xJRU5URSIsImVtYWlsIjoibWhlcm5hbmRlejAwMkBraW5hbC5lZHUuZ3QiLCJyb2wiOiJBRE1JTiIsImlhdCI6MTYxNTU1MzIzM30.9wYFSHqtgzrlWlGxFkbrimweWaIpzT4vfSkw2_TjnC0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Jefferson Genaro Reyes",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "CLIENTE5",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jreyes006@kinal.edu.gt",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/registrarCliente",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"registrarCliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Cliente",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDRjMGY5Y2UzN2NkMTNmYzhkY2ZjYWUiLCJub21icmUiOiJQYWJsbyBBbmRyZXMgVmVsYXpxdWV6IiwidXNlcm5hbWUiOiJDTElFTlRFNCIsImVtYWlsIjoicHZlbGF6cXVlejAwNUBraW5hbC5lZHUuZ3QiLCJyb2wiOiJDTElFTlRFIiwiaWF0IjoxNjE1NTk4ODgxfQ.wU6PKwUoVdPOthqobgnici7Wml4qP4h8NYuaHgvpxBQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Walter Frranciso Castillo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/editarUsuario/604c0c4ae37cd13fc8dcfca4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"editarUsuario",
+						"604c0c4ae37cd13fc8dcfca4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cambiar Roles",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3OTg0MDEzYzdiMjJlMTgxODg5ZjciLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1NTU0MDU2fQ.OX_2I828WodJxX4ZCGhsl5kUMM0_00U6_RYindQYHgw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "rol",
+							"value": "ADMIN",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/editarRol/604846ae5520c527c8d7a65d",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"editarRol",
+						"604846ae5520c527c8d7a65d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Cliente",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDRjMGY5Y2UzN2NkMTNmYzhkY2ZjYWUiLCJub21icmUiOiJQYWJsbyBBbmRyZXMgVmVsYXpxdWV6IiwidXNlcm5hbWUiOiJDTElFTlRFNCIsImVtYWlsIjoicHZlbGF6cXVlejAwNUBraW5hbC5lZHUuZ3QiLCJyb2wiOiJDTElFTlRFIiwiaWF0IjoxNjE1NTk4NjkzfQ.SBMsQJbh3ohH5Z-toOxmUz7nTS_vnXVhqHy_9dB0f78",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/eliminarCliente/604c0fc6e37cd13fc8dcfcaf",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"eliminarCliente",
+						"604c0fc6e37cd13fc8dcfcaf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "tmolina001@kinal.edu.gt",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "getToken",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ejemplo Productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/ejemplo",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ejemplo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Producto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3OTg0MDEzYzdiMjJlMTgxODg5ZjciLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1MzM3NTc4fQ.INFY-U86FG0uUgFdqDsQvg2uyKNDnFxens26OolyRZU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Telescopio",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Telescopio para observar las estrellas.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/agregarProducto",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"agregarProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Producto2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3OTg0MDEzYzdiMjJlMTgxODg5ZjciLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1MzM3NTc4fQ.INFY-U86FG0uUgFdqDsQvg2uyKNDnFxens26OolyRZU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Lentes ",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Lentes para mejorar el lente del telescopio",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/agregarProducto2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"agregarProducto2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Producto3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3MDE1YTZkNjE0NDJiNmM2OWU1ZDQiLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1MzQ5NzgwfQ.AW4G5wzvFw1n8owGE8-cHaG7cF8UfqqyfOGdXDBvF7E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Sudadera",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Sudadera con logo de NASA",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/agregarProducto3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"agregarProducto3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Producto4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3MDE1YTZkNjE0NDJiNmM2OWU1ZDQiLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1MzQ5NzgwfQ.AW4G5wzvFw1n8owGE8-cHaG7cF8UfqqyfOGdXDBvF7E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Taza",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Taza con logo de planetas",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/agregarProducto4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"agregarProducto4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Producto5",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3MDE1YTZkNjE0NDJiNmM2OWU1ZDQiLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1MzQ5NzgwfQ.AW4G5wzvFw1n8owGE8-cHaG7cF8UfqqyfOGdXDBvF7E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Libro",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Libro sobre el cosmos y universo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/agregarProducto5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"agregarProducto5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Producto6",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3MDE1YTZkNjE0NDJiNmM2OWU1ZDQiLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1MzQ5NzgwfQ.AW4G5wzvFw1n8owGE8-cHaG7cF8UfqqyfOGdXDBvF7E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Revista",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Cientificos de la Astronomia moderna",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/agregarProducto6",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"agregarProducto6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Producto",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3MDE1YTZkNjE0NDJiNmM2OWU1ZDQiLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1MzUxNjM4fQ.MWXJf78uYwGZS08NKtvZTv2mVp0XWF5XfXkpYHN3v0w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Libro 100 paginas",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/editarProducto/604849135520c527c8d7a663",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"editarProducto",
+						"604849135520c527c8d7a663"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar un producto",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3MDE1YTZkNjE0NDJiNmM2OWU1ZDQiLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1NTk5MjE5fQ.Hz8cFprI6HK2I4EmrzkkpMK0cVh7oGzVDBT5TcpOrr8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/obtenerProducto/604846c35520c527c8d7a65e",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"obtenerProducto",
+						"604846c35520c527c8d7a65e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Productos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3OTg0MDEzYzdiMjJlMTgxODg5ZjciLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1Mzk1MDAyfQ.thteOHZezcDV5WyezG19yIWxMXBpCNir9J3gnV_o99s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/obtenerProductos",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"obtenerProductos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar Producto",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3OTg0MDEzYzdiMjJlMTgxODg5ZjciLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1Mzk4NTMzfQ.qWwHXELy45D5jbMv9vaoCdpH9LmcNePaSTMzeD-ooN4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/EliminarProducto/6048f3a7d1900e31f88fe44d",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"EliminarProducto",
+						"6048f3a7d1900e31f88fe44d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ejemplo Categorias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/ejemploCategrias",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ejemploCategrias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Categoria",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3OTg0MDEzYzdiMjJlMTgxODg5ZjciLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1NDY1OTkwfQ.fuoyb3iXpAQYmo1GZHM3MnPf5eK8GrA6syHHjnP_Usg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombreCategoria",
+							"value": "Instrumentos",
+							"type": "text"
+						},
+						{
+							"key": "descripcionCategoria",
+							"value": "Instrumentos para observar el espacio",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/agregarCategoria",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"agregarCategoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Categoria2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3OTg0MDEzYzdiMjJlMTgxODg5ZjciLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1NDY1OTkwfQ.fuoyb3iXpAQYmo1GZHM3MnPf5eK8GrA6syHHjnP_Usg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombreCategoria",
+							"value": "Decorativos",
+							"type": "text"
+						},
+						{
+							"key": "descripcionCategoria",
+							"value": "Recuerdos y prendas de astronomia",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/agregarCategoria2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"agregarCategoria2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Categoria3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3OTg0MDEzYzdiMjJlMTgxODg5ZjciLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1NDY1OTkwfQ.fuoyb3iXpAQYmo1GZHM3MnPf5eK8GrA6syHHjnP_Usg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombreCategoria",
+							"value": "Lectura",
+							"type": "text"
+						},
+						{
+							"key": "descripcionCategoria",
+							"value": "Libros y revistas de astronomia.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/agregarCategoria3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"agregarCategoria3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditarCategoria",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3OTg0MDEzYzdiMjJlMTgxODg5ZjciLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1NDY1OTkwfQ.fuoyb3iXpAQYmo1GZHM3MnPf5eK8GrA6syHHjnP_Usg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombreCategoria",
+							"value": "Instrumentos Tecnicos",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/editarCategoria/604a11b5f8ae4d35e0a30288",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"editarCategoria",
+						"604a11b5f8ae4d35e0a30288"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar una categoria",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3MDE1YTZkNjE0NDJiNmM2OWU1ZDQiLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1NTk5Mzk3fQ.IpZAtWkCfqSz6gcO-w4L2kCEIJ-rrQXKGtlFhYID7-U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/obtenerCategoria/604aed21deb32c43644b932a",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"obtenerCategoria",
+						"604aed21deb32c43644b932a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Categorias",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3OTg0MDEzYzdiMjJlMTgxODg5ZjciLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1NDY1OTkwfQ.fuoyb3iXpAQYmo1GZHM3MnPf5eK8GrA6syHHjnP_Usg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/obtenerCategorias",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"obtenerCategorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Categoria",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3OTg0MDEzYzdiMjJlMTgxODg5ZjciLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1NDY1OTkwfQ.fuoyb3iXpAQYmo1GZHM3MnPf5eK8GrA6syHHjnP_Usg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Matias Alberto Hernandez",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/editarUsuario/6047993013c7b22e181889f8",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"editarUsuario",
+						"6047993013c7b22e181889f8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Productos Por Nombre",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3OTkzMDEzYzdiMjJlMTgxODg5ZjgiLCJub21icmUiOiJNYXJ0aW4gQWxiZXJ0byBIZXJuYW5kZXoiLCJ1c2VybmFtZSI6IkNMSUVOVEUiLCJlbWFpbCI6Im1oZXJuYW5kZXowMDJAa2luYWwuZWR1Lmd0Iiwicm9sIjoiQ0xJRU5URSIsImlhdCI6MTYxNTQ4NjIwNX0.zCxTiUnlqyFdVxpAui-2UVGHs7xIlqRkNaWQNjU73nI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Telescopio",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/obtenerProductosNombre",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"obtenerProductosNombre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar por Categoria Cliente",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3OTkzMDEzYzdiMjJlMTgxODg5ZjgiLCJub21icmUiOiJNYXJ0aW4gQWxiZXJ0byBIZXJuYW5kZXoiLCJ1c2VybmFtZSI6IkNMSUVOVEUiLCJlbWFpbCI6Im1oZXJuYW5kZXowMDJAa2luYWwuZWR1Lmd0Iiwicm9sIjoiQ0xJRU5URSIsImlhdCI6MTYxNTQ4ODI0OH0._D357Vxdsl-CiPFONk7QOF27VOMXTVKfho1EdMaeRGg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombreCategoria",
+							"value": "Lectura",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/obtenerCategoriasCliente",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"obtenerCategoriasCliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ejemplo Facturas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/ejemploFacturas",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ejemploFacturas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Factura",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3OTg0MDEzYzdiMjJlMTgxODg5ZjciLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1NTY3NzU2fQ.dFFAHOdHLEJrPyJMkNkJiIH2cxQI-7XW3bCpKsRP36I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Tienda Astronomia ",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "15. av zona 16",
+							"type": "text"
+						},
+						{
+							"key": "nit",
+							"value": "526341",
+							"type": "text"
+						},
+						{
+							"key": "numeroFactura",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "cantidadProductos",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "300",
+							"type": "text"
+						},
+						{
+							"key": "precio2",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "total",
+							"value": "300+12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/agregarFactura",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"agregarFactura"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Factura 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3OTg0MDEzYzdiMjJlMTgxODg5ZjciLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1NTY3NzU2fQ.dFFAHOdHLEJrPyJMkNkJiIH2cxQI-7XW3bCpKsRP36I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Tienda Astronomia 2",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "24 av zona 1",
+							"type": "text"
+						},
+						{
+							"key": "nit",
+							"value": "998877",
+							"type": "text"
+						},
+						{
+							"key": "numeroFactura",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "cantidadProductos",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "35",
+							"type": "text"
+						},
+						{
+							"key": "precio2",
+							"value": "150",
+							"type": "text"
+						},
+						{
+							"key": "total",
+							"value": "35+150",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/agregarFactura2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"agregarFactura2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Factura 3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3OTg0MDEzYzdiMjJlMTgxODg5ZjciLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1NTY3NzU2fQ.dFFAHOdHLEJrPyJMkNkJiIH2cxQI-7XW3bCpKsRP36I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Tienda Astronomia 3",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "8 av zona 12",
+							"type": "text"
+						},
+						{
+							"key": "nit",
+							"value": "993300",
+							"type": "text"
+						},
+						{
+							"key": "numeroFactura",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "cantidadProductos",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "25",
+							"type": "text"
+						},
+						{
+							"key": "precio2",
+							"value": "75",
+							"type": "text"
+						},
+						{
+							"key": "total",
+							"value": "25+75",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/agregarFactura3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"agregarFactura3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Factura 4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3OTg0MDEzYzdiMjJlMTgxODg5ZjciLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1NTcwNzg4fQ.73aLraQ0gpSs-BRmZU98vLIB4Zj6cARqpp_oyEN4Da0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Tienda Astronomia 3",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "1 av zona 21",
+							"type": "text"
+						},
+						{
+							"key": "nit",
+							"value": "708090",
+							"type": "text"
+						},
+						{
+							"key": "numeroFactura",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "cantidadProductos",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "300",
+							"type": "text"
+						},
+						{
+							"key": "precio2",
+							"value": "150",
+							"type": "text"
+						},
+						{
+							"key": "total",
+							"value": "300+150",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/agregarFactura4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"agregarFactura4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver Facturas de Usuarios",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQ3MDE1YTZkNjE0NDJiNmM2OWU1ZDQiLCJub21icmUiOiJUaGlhZ28gSm9zZSBNb2xpbmEiLCJ1c2VybmFtZSI6IkFETUlOIiwiZW1haWwiOiJ0bW9saW5hMDAxQGtpbmFsLmVkdS5ndCIsInJvbCI6IkFETUlOIiwiaWF0IjoxNjE1NTk5NjM1fQ.Qf8MOQj5Sh_0VRKCBwDJjSINJGCdNHhptC-8551R3yQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/obtenrFacturas",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"obtenrFacturas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
